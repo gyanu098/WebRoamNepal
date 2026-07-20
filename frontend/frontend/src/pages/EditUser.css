@@ -1,0 +1,51 @@
+.edit-user-container {
+  background: #dae8e8;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+  width: 500px;
+  margin: 40px auto;
+  text-align: center;
+  border: 4px solid #ff7b00;
+}
+
+.edit-user-container input {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin: 12px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.btn-update {
+  background: #ff7b00;
+  color: white;
+  border: none;
+  padding: 12px;
+  width: 100%;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.btn-update:hover {
+  background: #e66a00;
+}
+
+.btn-delete {
+  background: #d9534f;
+  color: white;
+  border: none;
+  padding: 12px;
+  width: 100%;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.btn-delete:hover {
+  background: #c9302c;
+}

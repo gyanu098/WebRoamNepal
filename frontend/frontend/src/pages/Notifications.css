@@ -1,0 +1,58 @@
+.notifications-page {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.notifications-back {
+  align-self: flex-start;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font: inherit;
+  padding: 0;
+}
+
+.mark-all-btn {
+  align-self: flex-start;
+}
+
+.notifications-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.notification-row {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 14px 16px;
+  cursor: pointer;
+  color: var(--text);
+}
+
+.notification-row.unread {
+  background: rgba(255, 122, 26, 0.08);
+  font-weight: 600;
+  border-color: #ff7a1a;
+}
+
+.notification-row p {
+  margin: 0 0 6px;
+  overflow-wrap: anywhere;
+}
+
+.notification-row-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+.notification-row-footer a {
+  color: #ff7a1a;
+  font-weight: 600;
+}

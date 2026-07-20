@@ -1,0 +1,61 @@
+.place-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 700px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.place-detail h2,
+.place-detail p {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.detail-img {
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.detail-description {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  white-space: pre-wrap;
+  color: var(--text);
+}
+
+.review-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.review-row p {
+  flex: 1;
+}
+
+.review-row-actions {
+  display: flex;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.review-row-actions button {
+  border: none;
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  background: var(--btn-secondary-bg);
+  color: var(--btn-secondary-text);
+}
+
+.review-edit-form {
+  background: var(--surface-muted);
+  border-radius: 10px;
+  padding: 10px;
+}
