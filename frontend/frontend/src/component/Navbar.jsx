@@ -1,4 +1,4 @@
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 import { useAuth } from "../context/AuthContext";
 import { useTheme } from "../context/ThemeContext";
@@ -9,6 +9,20 @@ const Navbar = () => {
   const { isAuthenticated, role, logout } = useAuth();
   const { theme, toggleTheme } = useTheme();
   const navigate = useNavigate();
+  const location = useLocation();
+
+  const isMinimal =
+    location.pathname === "/login" ||
+    location.pathname === "/register" ||
+    (location.pathname === "/" && !isAuthenticated);
+
+  if (isMinimal) {
+    return (
+      <header className="nav-bar">
+        <div className="brand">Roam Nepal</div>
+      </header>
+    );
+  }
 
   const baseLinks = [{ to: "/", label: "Home" }];
 
