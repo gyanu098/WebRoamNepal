@@ -21,8 +21,7 @@ const getConversation = async (userA, userB) => {
   return result.rows;
 };
 
-// One row per person the user has exchanged messages with, with the most
-// recent message and how many of their messages to this user are unread.
+
 const getConversationList = async (userId) => {
   const result = await pool.query(
     `SELECT

@@ -1,11 +1,11 @@
-// userModel.js
+
 const pool = require("../dataBase/db");
 
 
 
 
 
-// Create a new user
+
 const createUser = async (name, email, password, image) => {
   const result = await pool.query(
     "INSERT INTO users (name, email, password, image) VALUES ($1, $2, $3, $4) RETURNING *",
@@ -14,7 +14,7 @@ const createUser = async (name, email, password, image) => {
   return result.rows[0];
 };
 
-// Find existing user by email
+
 const existingUser = async (email) => {
   const result = await pool.query(
     "SELECT * FROM users WHERE email = $1",

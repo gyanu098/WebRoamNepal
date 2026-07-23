@@ -63,7 +63,7 @@ describe("POST /api/users/create", () => {
     expect(res.statusCode).toBe(400);
   });
 
-  // ── TEST 4: Missing password ─────────────────────────
+  
   test("should return 400 if password is missing", async () => {
     const res = await request(app)
       .post("/api/users/create")
@@ -94,7 +94,7 @@ describe("POST /api/users/create", () => {
     existingUser.mockResolvedValue(null);
     bcrypt.hash.mockResolvedValue("hashed_password");
 
-    // Mock: createUser rejects — simulates DB crash
+   
     createUser.mockRejectedValue(new Error("DB error"));
 
     const res = await request(app)
@@ -108,10 +108,10 @@ describe("POST /api/users/create", () => {
     expect(res.statusCode).toBe(500);
   });
 
-  // ── TEST 6: bcrypt failure ───────────────────────────
+  
   test("should return 500 if bcrypt fails", async () => {
     existingUser.mockResolvedValue(null);
-    // Mock: bcrypt.hash rejects — hashing fails
+    
     bcrypt.hash.mockRejectedValue(new Error("hash error"));
 
     const res = await request(app)
