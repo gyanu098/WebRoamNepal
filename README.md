@@ -77,3 +77,6 @@ npm test
 
 - Uploaded images are stored on disk under `backend/uploads/` and served at `/uploads/<filename>`.
 - `node_modules` and `.env` files are gitignored — if you're pulling this repo after they were previously committed, run `git rm -r --cached <path>` once locally to clear stale tracked copies (already done upstream).
+
+This is a test line to confirm my project is connected to GitHub.
+
