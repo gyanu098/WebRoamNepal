@@ -9,6 +9,7 @@ import Favorites from "./pages/Favorites";
 import Feedback from "./pages/Feedback";
 import ForgotPassword from "./pages/ForgotPassword";
 import Home from "./pages/Home";
+import Landing from "./pages/Landing";
 import Login from "./pages/Login";
 import Messages from "./pages/Messages";
 import Navbar from "./component/Navbar";
@@ -19,7 +20,13 @@ import Register from "./pages/Register";
 import ResetPassword from "./pages/ResetPassword";
 import User from "./pages/User";
 import ProtectedRoute from "./service/ProtectedRoute";
+import { useAuth } from "./context/AuthContext";
 import "./App.css";
+
+const RootRoute = () => {
+  const { isAuthenticated } = useAuth();
+  return isAuthenticated ? <Home /> : <Landing />;
+};
 
 
 
@@ -34,7 +41,7 @@ function App() {
 
       <div className="app-shell">
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<RootRoute />} />
           <Route path="/home" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
